@@ -1,167 +1,247 @@
+/* Estilos gerais */
+
+/* Importa a fonte Orbitron do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
-*{
+/* Define estilos padrão para todos os elementos */
+* {
   padding: 0;
   margin: 0;
 }
 
-body{
+/* Define o estilo do corpo da página */
+body {
   color: black;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
-  background: rgb(196,160,95);
-  background: -moz-linear-gradient(90deg, rgba(196,160,95,1) 0%, rgba(235,171,28,1) 35%, rgba(199,163,73,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(196,160,95,1) 0%, rgba(235,171,28,1) 35%, rgba(199,163,73,1) 100%);
-  background: linear-gradient(90deg, rgba(196,160,95,1) 0%, rgba(235,171,28,1) 35%, rgba(199,163,73,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c4a05f",endColorstr="#c7a349",GradientType=1);
+  /* Define um gradiente de fundo para o corpo da página */
+  background: rgb(196, 160, 95);
+  background: -moz-linear-gradient(90deg, rgba(196, 160, 95, 1) 0%, rgba(235, 171, 28, 1) 35%, rgba(199, 163, 73, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(196, 160, 95, 1) 0%, rgba(235, 171, 28, 1) 35%, rgba(199, 163, 73, 1) 100%);
+  background: linear-gradient(90deg, rgba(196, 160, 95, 1) 0%, rgba(235, 171, 28, 1) 35%, rgba(199, 163, 73, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c4a05f", endColorstr="#c7a349", GradientType=1);
 }
 
-h1{
-    top: 36vh;
-    position: relative;
-    text-align: center;
-    color: rgb(0, 0, 0);
+/* Estilos do cabeçalho */
+h1 {
+  top: 36vh;
+  position: relative;
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
 
-#convert-input{
-    text-decoration: none;
-    outline: none;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid white; 
-    color: black;
-    background-color: white;
-    width: 60vh;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
+/* Estilos do formulário de conversão */
+#convert-input {
+  text-decoration: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: black;
+  background-color: white;
+  width: 60vh;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 37vh;
-    gap: 10px; /* Espaçamento entre o input e o botão */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 37vh;
+  gap: 10px;
 }
 
-#convert-button{
-    outline: none;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    height: 4vh;
-    font-size: 18px;
-    width: 20vh; /* Ou qualquer outra largura desejada */
-    /* As propriedades position, justify-content, e text-align foram removidas porque não são necessárias com as novas regras de flexbox. */
+#convert-button {
+  outline: none;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  height: 4vh;
+  font-size: 18px;
+  width: 20vh;
 }
 
-#convert-button:hover{
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(255, 255, 255);
+#convert-button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
 }
 
-.header{
-    color: inherit; 
-    text-align: center;
-    align-items: center;
-  }
+/* Estilos do ícone do YouTube */
+.icon-wrapper {
+  text-align: center;
+  font-size: 2em;
+  top: 510px;
+  position: relative;
+}
 
-a:hover{
+/* Estilos dos ícones das redes sociais */
+.icon-wrapper a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon-wrapper a:hover {
   color: white;
 }
 
-a{
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  position: relative;
-  text-align: center;
-  align-items: center;
-}
-
-.icon-wrapper {
-    text-align: center;
-    font-size: 2em;
-    top: 510px;
-    position: relative;
-}
-
+/* Define a cor dos ícones do YouTube */
 [class^="fab fa-youtube"] {
-    color: rgb(146, 100, 1);
-  }
-  
-  [class^="fab fa-youtube"]:hover {
-    color: rgb(0, 0, 0);
-  }
-
-  .logo{
-    font-size: 20px;
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-    left: 40px;
-    top: 20px;
-  }
-  
-  .logo:hover{
-    color: white;
-  }
-  
-.title{
-    text-align: center;
-    font-size: 25px;
-    top: 430px;
-    position: relative;
+  color: rgb(146, 100, 1);
 }
-/* Language */
 
-.button-select{
+/* Define a cor dos ícones do YouTube ao passar o mouse */
+[class^="fab fa-youtube"]:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* Estilos do logotipo */
+.logo {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  left: 40px;
+  top: 20px;
+}
+
+.logo:hover {
+  color: white;
+}
+
+/* Estilos do título */
+.title {
+  text-align: center;
+  font-size: 25px;
+  top: 430px;
+  position: relative;
+}
+
+/* Estilos do seletor de idioma */
+.button-select {
   align-items: left;
   text-align: center;
   font-size: 16px;
   top: 30px;
   left: 50px;
   position: relative;
-  border: 2px solid black; /* Adiciona uma borda sólida preta */
-  padding: 5px; /* Adiciona um pouco de espaço interno para tornar a borda mais espaçosa em torno do texto */
-  border-radius: 5px; /* Adiciona bordas arredondadas para suavizar os cantos */
-  background-color: white; /* Define a cor de fundo para branco (ou qualquer outra cor de sua preferência) */
-  color: black; /* Cor do texto */
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
 }
-
 
 .nav-container {
   display: flex;
-  justify-content: space-between; /* Espaça os itens uniformemente */
-  align-items: center; /* Alinha os itens verticalmente */
-  padding: 20px; /* Adiciona um pouco de espaço interno para respiração */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .language-select {
   top: 18px;
-  margin-right: 90px; /* Ajuste conforme necessário para alinhar à direita */
-  cursor: pointer; /* Melhora a indicação de que o elemento é interativo */
+  margin-right: 90px;
+  cursor: pointer;
   background-color: black;
   border: 1px black;
   color: white;
   border-radius: 10px;
 }
 
-.language-select:hover{
+.language-select:hover {
   color: black;
   border: 1px white;
   background-color: white;
 }
 
-p{
+p {
   text-align: center;
   font-size: 25px;
   top: 420px;
   position: relative;
+}
+
+/* Media queries para responsividade */
+@media screen and (max-width: 768px) {
+  /* Ajustes para telas menores que 768px de largura */
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    top: 20vh;
+    font-size: 20px;
+  }
+
+  #convert-input {
+    width: 80vw;
+  }
+
+  .form-container {
+    top: 22vh;
+  }
+
+  #convert-button {
+    width: 40vw;
+  }
+
+  .icon-wrapper {
+    top: 410px;
+  }
+
+  .title {
+    top: 380px;
+    font-size: 20px;
+  }
+
+  p {
+    top: 370px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Ajustes para telas menores que 480px de largura */
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    top: 15vh;
+    font-size: 16px;
+  }
+
+  #convert-input {
+    width: 90vw;
+  }
+
+  .form-container {
+    top: 17vh;
+  }
+
+  #convert-button {
+    width: 50vw;
+  }
+
+  .icon-wrapper {
+    top: 330px;
+  }
+
+  .title {
+    top: 300px;
+    font-size: 16px;
+  }
+
+  p {
+    top: 290px;
+    font-size: 16px;
+  }
 }
