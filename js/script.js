@@ -1,11 +1,14 @@
+// Seleciona o botão de conversão, a caixa de entrada e o elemento de exibição de resultados
 const convertButton = document.getElementById('convert-button');
 const convertInput = document.getElementById('convert-input');
 const resultDisplay = document.querySelector('.result');
 
+// Adiciona um evento de clique ao botão de conversão
 convertButton.addEventListener("click", () => {
     getAudio();
 });
 
+// Função assíncrona para obter o áudio do YouTube
 async function getAudio(){
     let link = convertInput.value;
     let parts = link.split("="); // URLs do YouTube geralmente têm o ID após "=", não "-"
@@ -34,8 +37,10 @@ async function getAudio(){
         if (!response.ok) throw new Error('Network response was not ok');
         const result = await response.json(); 
 
+        // Exibe o título do vídeo
         resultDisplay.innerHTML = `<p class="title">Title: ${result.title}</p>`;
 
+        // Abre uma nova janela com o link de download após 1 segundo
         setTimeout(() => {
             window.open(result.link, "_blank");
         }, 1000);
