@@ -119,3 +119,49 @@ a{
     top: 430px;
     position: relative;
 }
+/* Language */
+
+.button-select{
+  align-items: left;
+  text-align: center;
+  font-size: 16px;
+  top: 30px;
+  left: 50px;
+  position: relative;
+  border: 2px solid black; /* Adiciona uma borda sólida preta */
+  padding: 5px; /* Adiciona um pouco de espaço interno para tornar a borda mais espaçosa em torno do texto */
+  border-radius: 5px; /* Adiciona bordas arredondadas para suavizar os cantos */
+  background-color: white; /* Define a cor de fundo para branco (ou qualquer outra cor de sua preferência) */
+  color: black; /* Cor do texto */
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Espaça os itens uniformemente */
+  align-items: center; /* Alinha os itens verticalmente */
+  padding: 20px; /* Adiciona um pouco de espaço interno para respiração */
+}
+
+.language-select {
+  top: 18px;
+  margin-right: 90px; /* Ajuste conforme necessário para alinhar à direita */
+  cursor: pointer; /* Melhora a indicação de que o elemento é interativo */
+  background-color: black;
+  border: 1px black;
+  color: white;
+  border-radius: 10px;
+}
+
+.language-select:hover{
+  color: black;
+  border: 1px white;
+  background-color: white;
+}
+
+p{
+  text-align: center;
+  font-size: 25px;
+  top: 420px;
+  position: relative;
+}
