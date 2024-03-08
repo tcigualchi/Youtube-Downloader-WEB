@@ -31,22 +31,25 @@ const translations = {
     },
 };
 
+// Seleciona o elemento com a classe "language-select"
 const languageSelect = document.querySelector(".language-select");
-const convertButton1 = document.getElementById("convert-button");
-const convertInput1 = document.getElementById("convert-input");
-const resultDisplay1 = document.querySelector('.result');
 
+// Adiciona um evento de mudança ao select
 languageSelect.addEventListener("change", (event) => {
     setLanguage(event.target.value);
 });
 
+// Função para definir o idioma
 const setLanguage = (language) => {
+    // Define o idioma da página
     document.documentElement.lang = language;
 
+    // Define o texto do placeholder e do botão de acordo com o idioma selecionado
     convertInput.placeholder = translations[language].placeholder;
     convertButton.innerText = translations[language].convbtn;
 };
 
+// Função assíncrona para obter o áudio do YouTube
 async function getAudio(){
     let link = convertInput.value;
     let parts = link.split("="); // URLs do YouTube geralmente têm o ID após "=", não "-"
@@ -74,8 +77,10 @@ async function getAudio(){
         if (!response.ok) throw new Error(translations[document.documentElement.lang].neterr);
         const result = await response.json(); 
 
+        // Exibe o título do vídeo
         resultDisplay.innerHTML = `<p class="title">${translations[document.documentElement.lang].titleText} ${result.title}</p>`;
 
+        // Abre uma nova janela com o link de download após 1 segundo
         setTimeout(() => {
             window.open(result.link, "_blank");
         }, 1000);
