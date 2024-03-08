@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube Video Downloader</title>
+    <!-- Inclui o arquivo de estilo CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Inclui o ícone do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="shortcut icon" href="icon.ico">
+    <!-- Define o ícone da página -->
+    <link rel="shortcut icon" href="/icon.ico">
 </head>
 <body>
 
+    <!-- Cabeçalho da página -->
     <nav class="nav-container">
+        <!-- Logotipo -->
         <a href="#" class="logo">João Victor Gualchi.</a>
+        <!-- Seletor de idioma -->
         <select class="button-select language-select"> <!-- Adicionei a classe language-select para estilização específica -->
             <option value="en">English</option>
             <option value="ptbr">Brazilian Portuguese</option>
@@ -20,7 +26,9 @@
     </nav>
     
 
+    <!-- Cabeçalho da seção de download -->
     <header>
+        <!-- Ícones de redes sociais -->
         <div class="icon-wrapper">
             <a href="https://www.linkedin.com/in/joão-victor-gualchi-b19460220/"> <i class="fa-brands fa-linkedin"></i> </a> 
             <a href="https://github.com/tcigualchi"> <i class="fa-brands fa-github"></i> </a>
@@ -28,18 +36,22 @@
         </div>
     </header>
 
+    <!-- Container principal -->
     <div class="container">
+        <!-- Título principal -->
         <h1><i class="fab fa-youtube"></i> Youtube Downloader</h1>
+        <!-- Formulário de conversão -->
         <div class="form-container"> 
             <input type="text" id="convert-input" placeholder="Paste YouTube Video link here...">
             <button type="submit" id="convert-button">Download</button>
         </div>
+        <!-- Resultado da conversão -->
         <div class="result">
             <p id="title"></p>
         </div>
     </div>
 
-    
+    <!-- Inclui os scripts JavaScript -->
     <script src="js/script.js"></script>
     <script src="js/lang.js"></script>
 </body>
