@@ -32,7 +32,7 @@ async function getAudio(){
     try {
         const response = await fetch(url, options);
         if (!response.ok) throw new Error('Network response was not ok');
-        const result = await response.json(); // Supondo que a resposta é um JSON. Use json() em vez de text()
+        const result = await response.json(); 
 
         resultDisplay.innerHTML = `<p class="title">Title: ${result.title}</p>`;
 
@@ -42,7 +42,6 @@ async function getAudio(){
     } catch (error) {
         console.error('Fetch error: ', error);
         alert("There was an error processing your request. Please try again.");
-        // Certifique-se de limpar ou atualizar resultDisplay aqui se necessário
         resultDisplay.innerHTML = "<p>There was an error processing your request. Please try again.</p>";
     }
 }
