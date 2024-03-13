@@ -322,4 +322,20 @@ p {
     top: 290px;
     font-size: 16px;
   }
+  #toggleTheme {
+    position: fixed;
+    bottom: 0;
+    margin: 10px;
+    left: 40px;
+    bottom: 20px;
+    transition: 0.3s ease-out;
+    outline: none;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 4vh;
+    background-color: black;
+    align-items: center;
+    left: 40%;
+  }
 }
