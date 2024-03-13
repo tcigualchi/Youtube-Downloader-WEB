@@ -1,7 +1,7 @@
 /* Estilos gerais */
 
 /* Importa a fonte Orbitron do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 /* Define estilos padrão para todos os elementos */
 * {
@@ -11,23 +11,85 @@
 
 /* Define o estilo do corpo da página */
 body {
-  color: black;
+  color: var(--bodytxtcolor);
   overflow: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   /* Define um gradiente de fundo para o corpo da página */
-  background: rgb(196, 160, 95);
-  background: -moz-linear-gradient(90deg, rgba(196, 160, 95, 1) 0%, rgba(235, 171, 28, 1) 35%, rgba(199, 163, 73, 1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(196, 160, 95, 1) 0%, rgba(235, 171, 28, 1) 35%, rgba(199, 163, 73, 1) 100%);
-  background: linear-gradient(90deg, rgba(196, 160, 95, 1) 0%, rgba(235, 171, 28, 1) 35%, rgba(199, 163, 73, 1) 100%);
+  background: var(--goldbg);
+  background: var(--bglinear);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c4a05f", endColorstr="#c7a349", GradientType=1);
 }
+
+/* Configuração de cores // Color config */
+:root {
+  /* Variáveis para o modo padrão */
+  --bodytxtcolor: #000000;
+  --goldbg: #c4a05f;
+  --bglinear: linear-gradient(90deg, rgba(196, 160, 95, 1) 0%, rgba(235, 171, 28, 1) 35%, rgba(199, 163, 73, 1) 100%);
+  --cabeçalhocolor: #000000;
+  --cnvtinpt: #d3d3d3;
+  --cnvtiptbox: #808080;
+  --cnvtipntcolor: #000000;
+  --cnvtinpbg: #ffffff;
+  --cnvtbt: #000000;
+  --cnvtbtcolor: #ffffff;
+  --cnvtbtnbg: #000000;
+  --cnvtbthvcolor: #000000;
+  --cnvtbtbghv: #ffffff;
+  --cnvtbthv: #ffffff;
+  --iconcolor: #000000;
+  --iconcolorhv: #ffffff;
+  --fabyt: #926401;
+  --fabythover: #000000;
+  --logo: #000000;
+  --logohv: #ffffff;
+  --btnslc: #000000;
+  --btnslcbg: #ffffff;
+  --btnslccolor: #000000;
+  --lngslcbg: #000000;
+  --lngslcborder: #000000;
+  --lngslccolor: #ffffff;
+  --lngslchoverclr: #000000;
+  --lngslcborder: #ffffff; 
+  --lngslcclr: #ffffff;
+}
+
+:root.modo-branco {
+  /* Substituições para o modo branco */
+  --bodytxtcolor: #000000;
+  --goldbg: rgb(235,235,235);
+  --bglinear: linear-gradient(90deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 35%, rgba(244,244,244,1) 100%);
+  --cabeçalhocolor: #000000;
+  --cnvtinpt: #d3d3d3;
+  --cnvtiptbox: #808080;
+  --cnvtipntcolor: #000000;
+  --cnvtinpbg: #ffffff;
+  --cnvtbt: rgb(221, 221, 221);
+  --cnvtbtcolor: #000000;
+  --cnvtbtnbg: lightgray;
+  --cnvtbthvcolor: #000000;
+  --cnvtbtbghv: rgb(231, 231, 231);
+  --cnvtbthv: #ffffff;
+  --iconcolor: #000000;
+  --iconcolorhv: rgb(100, 100, 100);
+  --fabyt: #8F8F8F;
+  --fabythover: #8F8F8F;
+  --logo: #000000;
+  --logohv: rgb(100, 100, 100);
+  --btnslc: black;
+  --btnslcbg: black;
+  --btnslccolor: white;
+}
+
 
 /* Estilos do cabeçalho */
 h1 {
   top: 36vh;
   position: relative;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: var(--cabeçalhocolor);
 }
 
 /* Estilos do formulário de conversão */
@@ -36,10 +98,10 @@ h1 {
   outline: none;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid lightgray;
-  box-shadow: 2px 2px 5px gray;
-  color: black;
-  background-color: white;
+  border: 1px solid var(--cnvtinpt);
+  box-shadow: 2px 2px 5px var(--cnvtiptbox);
+  color: var(--cnvtipntcolor);
+  background-color: var(--cnvtinpbg);
   width: 60vh;
   font-size: 16px;
   font-weight: 600;
@@ -60,9 +122,9 @@ h1 {
   outline: none;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  border: 1px solid var(--cnvtbt);
+  color: var(--cnvtbtcolor);
+  background-color: var(--cnvtbtnbg);
   cursor: pointer;
   height: 4vh;
   font-size: 18px;
@@ -70,9 +132,9 @@ h1 {
 }
 
 #convert-button:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
+  color: var(--cnvtbthvcolor);
+  background-color: var(--cnvtbtbghv);
+  border: 1px solid var(--cnvtbthv);
 }
 
 /* Estilos do ícone do YouTube */
@@ -86,28 +148,28 @@ h1 {
 /* Estilos dos ícones das redes sociais */
 .icon-wrapper a {
   text-decoration: none;
-  color: black;
+  color: var(--iconcolor);
 }
 
 .icon-wrapper a:hover {
-  color: white;
+  color: var(--iconcolorhv);
   transition: 0.3s ease-out;
 }
 
 /* Define a cor dos ícones do YouTube */
 [class^="fab fa-youtube"] {
-  color: rgb(146, 100, 1);
+  color: var(--fabyt);
 }
 
 /* Define a cor dos ícones do YouTube ao passar o mouse */
 [class^="fab fa-youtube"]:hover {
-  color: rgb(0, 0, 0);
+  color: var(--fabythover);
 }
 
 /* Estilos do logotipo */
 .logo {
   font-size: 20px;
-  color: black;
+  color: var(--logo);
   text-decoration: none;
   font-weight: 600;
   position: relative;
@@ -116,7 +178,7 @@ h1 {
 }
 
 .logo:hover {
-  color: white;
+  color: var(--logohv);
   transition: 0.4s ease-out;
 }
 
@@ -136,11 +198,11 @@ h1 {
   top: 30px;
   left: 50px;
   position: relative;
-  border: 2px solid black;
+  border: 2px solid var(--btnslc);
   padding: 5px;
   border-radius: 5px;
-  background-color: white;
-  color: black;
+  background-color: var(--btnslcbg);
+  color: var(--btnslccolor);
 }
 
 .nav-container {
@@ -154,23 +216,35 @@ h1 {
   top: 18px;
   margin-right: 90px;
   cursor: pointer;
-  background-color: black;
-  border: 1px black;
-  color: white;
+  background-color: var(--lngslcbg);
+  border: 1px var(--lngslcborder);
+  color: var(--lngslcclr);
   border-radius: 10px;
 }
 
-.language-select:hover {
-  color: black;
-  border: 1px white;
-  background-color: white;
-}
 
 p {
   text-align: center;
   font-size: 25px;
   top: 420px;
   position: relative;
+}
+
+/* botão que muda a cor do site // button charge color site*/
+
+#toggleTheme {
+  position: fixed;
+  bottom: 0;
+  margin: 10px;
+  left: 40px;
+  bottom: 20px;
+  transition: 0.3s ease-out;
+  outline: none;
+  padding: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  height: 4vh;
+  background-color: black;
 }
 
 /* Media queries para responsividade */
