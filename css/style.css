@@ -284,6 +284,57 @@ p {
     top: 370px;
     font-size: 20px;
   }
+
+ body {
+    font-size: 12px;
+  }
+
+  h1 {
+    top: 15vh;
+    font-size: 16px;
+  }
+
+  #convert-input {
+    width: 90vw;
+  }
+
+  .form-container {
+    top: 17vh;
+  }
+
+  #convert-button {
+    width: 50vw;
+  }
+
+  .icon-wrapper {
+    top: 330px;
+  }
+
+  .title {
+    top: 300px;
+    font-size: 16px;
+  }
+
+  p {
+    top: 290px;
+    font-size: 16px;
+  }
+  #toggleTheme {
+    position: fixed;
+    bottom: 0;
+    margin: 10px;
+    left: 40px;
+    bottom: 20px;
+    transition: 0.3s ease-out;
+    outline: none;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 4vh;
+    background-color: black;
+    align-items: center;
+    left: 45%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -338,4 +389,5 @@ p {
     align-items: center;
     left: 40%;
   }
+
 }
