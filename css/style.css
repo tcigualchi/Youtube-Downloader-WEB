@@ -389,5 +389,8 @@ p {
     align-items: center;
     left: 40%;
   }
+  .language-select {
+    width: 120px;
+  }
 
 }
