@@ -335,6 +335,9 @@ p {
     align-items: center;
     left: 45%;
   }
+  .language-select {
+    width: 120px;
+  }
 }
 
 @media screen and (max-width: 480px) {
