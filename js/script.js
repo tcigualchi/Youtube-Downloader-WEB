@@ -50,3 +50,21 @@ async function getAudio(){
         resultDisplay.innerHTML = "<p>There was an error processing your request. Please try again.</p>";
     }
 }
+
+document.getElementById('toggleTheme').addEventListener('click', function() {
+    document.documentElement.classList.toggle('modo-branco');
+    alterarImagem();
+});
+
+function alterarImagem() {
+    const imagem = document.getElementById("toggleTheme");
+    const modoBranco = document.documentElement.classList.contains("modo-branco");
+
+    if (modoBranco) {
+        imagem.src = "imgs/white.png"; // Caminho da imagem do botão no modo gold
+    } else {
+        imagem.src = "imgs/gold.png"; // Caminho da imagem do botão no modo branco
+    }
+}
+  
+
