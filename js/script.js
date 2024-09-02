@@ -11,11 +11,11 @@ convertButton.addEventListener("click", () => {
 // Função assíncrona para obter o áudio do YouTube
 async function getAudio(){
     let link = convertInput.value;
-    let parts = link.split("="); // URLs do YouTube geralmente têm o ID após "=", não "-"
+    let parts = link.split("v="); // URLs do YouTube geralmente têm o ID após "v=", então vamos usar isso para separar o ID do vídeo
     let videoId = "";
 
     if (parts.length > 1) {
-        videoId = parts[parts.length - 1]; // Pega a última parte após o último "=", que deve ser o ID do vídeo
+        videoId = parts[1].split("&")[0]; // Pega a parte após "v=" e antes de qualquer outro parâmetro
     } else {
         console.log("Error!");
         alert("Error! Youtube URL Invalid");
@@ -23,12 +23,12 @@ async function getAudio(){
         return;
     }
 
-    const url = `https://youtube-mp36.p.rapidapi.com/dl?id=${videoId}`; // Use aspas invertidas para interpolação
+    const url = `https://youtube-media-downloader.p.rapidapi.com/v2/video/details?videoId=${videoId}`;
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'c312ee3d26mshfcc97a03e04aa50p1e05fbjsn29eaf86c0296',
-            'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
+            'x-rapidapi-key': '8816a6d4f3mshb9250a355257787p1f86c1jsn709c5100078b',
+            'x-rapidapi-host': 'youtube-media-downloader.p.rapidapi.com'
         }
     };
 
@@ -61,10 +61,8 @@ function alterarImagem() {
     const modoBranco = document.documentElement.classList.contains("modo-branco");
 
     if (modoBranco) {
-        imagem.src = "imgs/white.png"; // Caminho da imagem do botão no modo gold
+        imagem.src = "imgs/white.png"; // Caminho da imagem do botão no modo branco
     } else {
-        imagem.src = "imgs/gold.png"; // Caminho da imagem do botão no modo branco
+        imagem.src = "imgs/gold.png"; // Caminho da imagem do botão no modo gold
     }
 }
-  
-
