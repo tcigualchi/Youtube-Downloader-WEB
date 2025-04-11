@@ -118,17 +118,18 @@ h1 {
 }
 
 #convert-button {
-  transition: 0.3s ease-out;
-  outline: none;
-  padding: 5px;
-  border-radius: 10px;
-  border: 1px solid var(--cnvtbt);
-  color: var(--cnvtbtcolor);
-  background-color: var(--cnvtbtnbg);
-  cursor: pointer;
-  height: 4vh;
-  font-size: 18px;
-  width: 20vh;
+    transition: 0.3s ease-out;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--cnvtbt);
+    color: var(--cnvtbtcolor);
+    background-color: var(--cnvtbtnbg);
+    cursor: pointer;
+    height: 6vh;
+    font-size: 18px;
+    width: 23vh;
+    text-align: -webkit-center;
 }
 
 #convert-button:hover {
@@ -139,10 +140,10 @@ h1 {
 
 /* Estilos do ícone do YouTube */
 .icon-wrapper {
-  text-align: center;
-  font-size: 2em;
-  top: 510px;
-  position: relative;
+    text-align: center;
+    font-size: 2em;
+    top: 80vh;
+    position: relative;
 }
 
 /* Estilos dos ícones das redes sociais */
